@@ -96,11 +96,11 @@
 			if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post();
 			?>
 					<p class="lacoco-link-ttl">
-						<a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank"><?php the_title(); ?></a>
+						<a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank"><?php the_title(); ?></a>
 					</p>
 
 					<div class="lacoco-point-img">
-						<a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+						<a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
 							<img src="<?php the_field('conclusion_image'); ?>" alt="">
 						</a>
 					</div>
@@ -144,7 +144,7 @@
 					</div>
 
 					<div class="lacoco-point-btn">
-						<a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+						<a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
 							満足度で選ぶなら<?php the_title(); ?><br>詳細を公式サイトで見る
 						</a>
 					</div>

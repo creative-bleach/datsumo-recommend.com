@@ -41,7 +41,7 @@
           3つのポイントに加えて、<span>店員さんが優しい</span>と言われている<span>ストラッシュがランキング１位</span>なのも納得です！
           </p>
           <div class="lacoco-point-btn">
-            <a href="/stlassh?code=<?php echo $ad_code; ?>" target="_blank">
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_314(); console.log('to LP')" target="_blank">
               ストラッシュの詳細を見る
             </a>
           </div>

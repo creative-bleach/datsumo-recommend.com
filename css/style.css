@@ -219,8 +219,8 @@ b {
 	align-items: center;
 	justify-content: space-between;
 }
-.btn_box .btn_more02 {
-	width: 48%;
+.btn_box .btn_more02 br.hide {
+	display: block;
 }
 .btn_more02 {
 	display: block;
@@ -233,6 +233,12 @@ b {
 	border-radius: 5px;
 	position: relative;
 }
+
+.btn_box .btn_more02 {
+	width: 48%;
+	font-size: 24px;
+}
+
 .btn_more02::after {
 	position: absolute;
 	display: block;
@@ -308,7 +314,13 @@ b {
 	.btn_box .btn_more02 {
 		padding: 10px 0;
 		width: 48%;
+		font-size: 16px;
 	}
+
+	.btn_box .btn_more02 br.hide {
+		display: none;
+	}
+	
 	.btn_box .btn_more02:first-child {
 		margin: 0 0 10px;
 	}
@@ -664,6 +676,10 @@ b {
 	top: 14px;
 	max-width: 100px;
 }
+#ranking_area .rank_icon.is-single {
+	top: 40px;
+}
+
 #ranking_area .rate {
 	position: absolute;
 	right: 20px;
@@ -761,6 +777,8 @@ b {
 #ranking_area .info {
 	width: 100%;
 	border: 1px solid #dad9d9;
+}
+#ranking_area .info:last-child {
 	margin: 0 0 20px;
 }
 #ranking_area .info tr {
@@ -771,9 +789,10 @@ b {
 	color: #fff;
 	font-weight: bold;
 	font-size: 30px;
+	line-height: 1.2;
 	text-align: center;
 	border-right: 1px solid #dad9d9;
-	padding: 20px;
+	padding: 20px 10px;
 	vertical-align: middle;
 	width: 16%;
 }
@@ -789,10 +808,18 @@ b {
 	padding: 20px;
 	font-size: 30px;
 	background: #fff;
+	width: 33%;
 }
 #ranking_area .info td .icon_info {
 	margin: 0 auto 20px;
 	width: 80px;
+	text-align: center;
+}
+#ranking_area .info td .icon_info img {
+	max-height: 80px;
+}
+#ranking_area .info tbody tr:last-of-type td:last-of-type .icon_info {
+	width: 110px;
 }
 #ranking_area .voice .main_ttl {
 	position: relative;
@@ -1058,6 +1085,9 @@ b {
 		top: 7px;
 		left: 10px;
 	}
+	#ranking_area .rank_icon.is-single {
+		top: 17px;
+	}
 	#ranking_area .rank_icon img {
 		max-width: 50px;
 	}
@@ -1102,7 +1132,7 @@ b {
 		padding: 5px 10px 15px;
 	}
 	#ranking_area .point .box dl {
-		margin: 0 0 10px;
+		margin: 0 8px 10px 0;
 		padding: 10px;
 	}
 	#ranking_area .point .box dt {
@@ -1124,7 +1154,7 @@ b {
 	#ranking_area .point .box dd {
 		font-size: 90%;
 	}
-	#ranking_area .info {
+	#ranking_area .info:last-child {
 		margin: 0 0 10px;
 	}
 	#ranking_area .info th {
@@ -1139,6 +1169,14 @@ b {
 		margin: 0 auto 10px;
 		width: 40px;
 	}
+	#ranking_area .info td .icon_info img {
+		max-height: 40px;
+	}
+
+	#ranking_area .info tbody tr:last-of-type td:last-of-type .icon_info {
+		width: 55px;
+	}
+
 	#ranking_area .voice .box_in {
 		margin: 0 0 10px;
 		padding: 15px;
@@ -2475,6 +2513,14 @@ b {
 	padding: 15px 30px;
 }
 
+.shop_cont .shop_link_list .ttl {
+	background: #fffae0;
+}
+
+.shop_cont .shop_link_list .pre_txt {
+	background: #fffae0;
+}
+
 .shop_link_list .ttl::after {
 	position: absolute;
 	top: 50%;
@@ -2960,5 +3006,32 @@ b {
 	}
 	#footer .inner {
 		max-width: 1020px;
+	}
+}
+
+#ranking_area .cont {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: calc(100% - 40px);
+	height: 97px;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+}
+
+#ranking_area .cont .rank_icon {
+	position: static !important;
+}
+#ranking_area .cont .rate {
+	position: static !important;
+}
+
+@media screen and (max-width: 768px) {
+	#ranking_area .cont {
+		width: calc(100% - 20px);
+		height: 50px;
+		top: 12px;
+		left: 10px;
 	}
 }

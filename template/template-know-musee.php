@@ -41,7 +41,7 @@
             3つのポイントに加えて、<span>店員さんが優しい</span>と言われている<span>ミュゼがランキング１位</span>なのも納得です！
           </p>
           <div class="lacoco-point-btn">
-            <a href="/musee?code=<?php echo $ad_code; ?>" target="_blank">
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_394(); console.log('to LP')" target="_blank">
               ミュゼの詳細を見る
             </a>
           </div>

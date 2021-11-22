@@ -108,7 +108,7 @@ endif;
         ?>
             <div class="top-block">
               <div class="salon-img">
-                <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+                <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
                   <?php if (get_field('comparison_img')) : ?>
                     <img src="<?php the_field('comparison_img'); ?>" alt="">
                   <?php else : ?>
@@ -140,7 +140,7 @@ endif;
                 </tbody>
               </table>
             </div>
-            <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
         <?php
           endwhile;
         endif;
@@ -157,7 +157,7 @@ endif;
         ?>
             <div class="top-block">
               <div class="salon-img">
-                <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+                <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
                   <?php if (get_field('comparison_img')) : ?>
                     <img src="<?php the_field('comparison_img'); ?>" alt="">
                   <?php else : ?>
@@ -180,7 +180,7 @@ endif;
                 </tbody>
               </table>
             </div>
-            <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
         <?php
           endwhile;
         endif;
@@ -197,7 +197,7 @@ endif;
         ?>
             <div class="top-block">
               <div class="salon-img">
-                <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+                <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
                   <?php if (get_field('comparison_img')) : ?>
                     <img src="<?php the_field('comparison_img'); ?>" alt="">
                   <?php else : ?>
@@ -237,7 +237,7 @@ endif;
                 </tbody>
               </table>
             </div>
-            <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
         <?php
           endwhile;
         endif;
@@ -254,7 +254,7 @@ endif;
         ?>
             <div class="top-block">
               <div class="salon-img">
-                <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" target="_blank">
+                <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" target="_blank">
                   <?php if (get_field('comparison_img')) : ?>
                     <img src="<?php the_field('comparison_img'); ?>" alt="">
                   <?php else : ?>
@@ -291,7 +291,7 @@ endif;
                 </tbody>
               </table>
             </div>
-            <a href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
+            <a href="javascript:void(0)" onClick="localStorage.setItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="link-btn"><?php the_title(); ?>の公式サイトはこちら</a>
         <?php
           endwhile;
         endif;

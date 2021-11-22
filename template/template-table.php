@@ -33,7 +33,7 @@
         ?>
           <tr>
             <th class="logo fixed">
-              <a href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" target="_blank">
+              <a href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" onclick="localStorage.removeItem('nearby'); localStorage.removeItem('useDefault');" target="_blank">
                 <!-- logo -->
                 <p class="img"><img src="<?php the_field('image_logo'); ?>" alt="<?php the_title(); ?>"></p>
                 <!-- name -->
@@ -101,7 +101,7 @@
               </p>
             </td>
             <!-- permalink -->
-            <td><a href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" target="_blank" class="btn_more01 btn_animation">詳細</a></td>
+            <td><a href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" onclick="localStorage.removeItem('nearby'); localStorage.removeItem('useDefault');" class="btn_more01 btn_animation">詳細</a></td>
           </tr>
         <?php
           endwhile;

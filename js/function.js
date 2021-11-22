@@ -85,7 +85,8 @@ $(function () {
 ----------------------------------------------------------------------*/
 $(function () {
 	$(".shop_link_list").hide();
-	$(".btn_more02.aco").click(function () {
+	$(".shop_cont .shop_link_list").show();
+	$(".shop.aco").click(function () {
 		$(this).toggleClass('open');
 		$(this).parent().siblings(".shop_link_list").slideToggle();
 		$(this).parent().siblings(".shop_link_list").toggleClass('open');
@@ -158,6 +159,21 @@ $(function () {
 				slidesToScroll: 1,
 			}
 		}]
+	});
+	$('#recommend_slider').slick({
+		infinite: true,
+		autoplaySpeed: 3000,
+		dots: false,
+		arrows: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		mobileFirst: true,
+		responsive: [
+			 {
+					breakpoint: 767,
+					settings: "unslick"
+			 }
+		]
 	});
 });
 

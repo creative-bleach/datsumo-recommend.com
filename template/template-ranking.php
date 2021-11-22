@@ -9,6 +9,8 @@
 		localStorage.removeItem('isStudent');
 		localStorage.removeItem('isWorker');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 
 <?php elseif (is_page('227')) : ?>
@@ -18,6 +20,8 @@
 		localStorage.removeItem('isStudent');
 		localStorage.removeItem('isCost');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 
 <?php elseif (is_page('229')) : ?>
@@ -27,6 +31,8 @@
 		localStorage.removeItem('isCost');
 		localStorage.removeItem('isWorker');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 
 <?php elseif (is_page('ranking_body')) : ?>
@@ -36,6 +42,8 @@
 		localStorage.removeItem('isTop');
 		localStorage.removeItem('isCost');
 		localStorage.removeItem('isWorker');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 
 <?php elseif (is_page('twenty')) : ?>
@@ -45,6 +53,8 @@
 		localStorage.removeItem('isTop');
 		localStorage.removeItem('isCost');
 		localStorage.removeItem('isWorker');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 
 <?php elseif (is_page('ranking_vio')) : ?>
@@ -54,6 +64,8 @@
 		localStorage.removeItem('isStudent');
 		localStorage.removeItem('isWorker');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isTop');
 	</script>
 
 <?php elseif (is_page('ranking_face')) : ?>
@@ -63,6 +75,8 @@
 		localStorage.removeItem('isStudent');
 		localStorage.removeItem('isWorker');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isVio');
+		localStorage.removeItem('isTop');
 	</script>
 
 <?php elseif (is_front_page()) : ?>
@@ -72,8 +86,11 @@
 		localStorage.removeItem('isStudent');
 		localStorage.removeItem('isWorker');
 		localStorage.removeItem('isBody');
+		localStorage.removeItem('isFace');
+		localStorage.removeItem('isVio');
 	</script>
 <?php endif; ?>
+
 
 <section id="ranking_total" class="area">
 	<div class="inner">
@@ -206,15 +223,10 @@
 								<?php endif; ?>
 							</p>
 							<!-- permalink -->
-							<?php if (get_field($ranking) == 1) : ?><a href="#rank01">
-								<?php elseif (get_field($ranking) == 2) : ?><a href="#rank02">
-									<?php elseif (get_field($ranking) == 3) : ?><a href="#rank03">
-										<?php elseif (get_field($ranking) == 4) : ?><a href="#rank04">
-											<?php elseif (get_field($ranking) == 5) : ?><a href="#rank05">
-												<?php endif; ?>
-												<!-- logo -->
-												<p class="logo">
-													<img src="
+							<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')">
+								<!-- logo -->
+								<p class="logo">
+									<img src="
                   <?php
 									if (is_page('225') || is_page('sougou2')) :
 										// cost
@@ -271,10 +283,10 @@
 									endif;
 									?>
                   " alt="<?php the_title(); ?>">
-												</p>
-												<!-- name -->
-												<p class="name"><?php the_title(); ?></p>
-												</a>
+								</p>
+								<!-- name -->
+								<p class="name"><?php the_title(); ?></p>
+							</a>
 						</div>
 						<div class="right">
 							<div class="rate">
@@ -294,14 +306,7 @@
 								<span class="pink01"><?php the_field('star'); ?></span>
 							</div>
 							<!-- permalink -->
-							<?php if (get_field($ranking) == 1) : ?><a href="#rank01" class="btn_more01 btn_animation">
-								<?php elseif (get_field($ranking) == 2) : ?><a href="#rank02" class="btn_more01 btn_animation">
-									<?php elseif (get_field($ranking) == 3) : ?><a href="#rank03" class="btn_more01 btn_animation">
-										<?php elseif (get_field($ranking) == 4) : ?><a href="#rank04" class="btn_more01 btn_animation">
-											<?php elseif (get_field($ranking) == 5) : ?><a href="#rank05" class="btn_more01 btn_animation">
-												<?php endif; ?>
-												詳細
-												</a>
+							<a class="btn_more01 btn_animation" target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')">詳細</a>
 						</div>
 					</li>
 			<?php
@@ -318,28 +323,28 @@
 
 <?php if (is_page('twenty') || is_page('vio') || is_page('ranking_face')) : ?>
 	<div class="lacoco-point-btn ranking">
-		<a href="/lacoco?code=<?php echo $ad_code; ?>" target="_blank">
+		<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_375(); console.log('to LP')">
 			顧客満足度など3つの項目で1位を獲得<br>LACOCOの無料カウンセリングはこちら
 		</a>
 	</div>
 
 <?php elseif (is_page('225') || is_page('229') || is_page('ranking_body') || is_page('sougou2')) : ?>
 	<div class="lacoco-point-btn ranking">
-		<a href="/stlassh?code=<?php echo $ad_code; ?>" target="_blank">
+		<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_314(); console.log('to LP')">
 			顧客満足度など3つの項目で1位を獲得<br>ストラッシュの無料カウンセリングはこちら
 		</a>
 	</div>
 
 <?php elseif (is_page('ranking_vio')) : ?>
 	<div class="lacoco-point-btn ranking">
-		<a href="/musee?code=<?php echo $ad_code; ?>" target="_blank">
+		<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_394(); console.log('to LP')">
 			顧客満足度など3つの項目で1位を獲得<br>ミュゼの無料カウンセリングはこちら
 		</a>
 	</div>
 
 <?php else : ?>
 	<div class="lacoco-point-btn ranking">
-		<a href="/lacoco?code=<?php echo $ad_code; ?>" target="_blank">
+		<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_375(); console.log('to LP')">
 			顧客満足度など3つの項目で1位を獲得<br>LACOCOの無料カウンセリングはこちら
 		</a>
 	</div>
@@ -462,15 +467,15 @@
 					$post_slug = basename(get_permalink($postId));
 					?>
 					<?php if (get_field($ranking) == 1) : ?>
-						<li id="rank01" class="rank01_bg">
+						<li class="rank01_bg">
 						<?php elseif (get_field($ranking) == 2) : ?>
-						<li id="rank02" class="rank02_bg">
+						<li class="rank02_bg">
 						<?php elseif (get_field($ranking) == 3) : ?>
-						<li id="rank03" class="rank03_bg">
+						<li class="rank03_bg">
 						<?php elseif (get_field($ranking) == 4) : ?>
-						<li id="rank04" class="rank04_bg">
+						<li class="rank04_bg">
 						<?php elseif (get_field($ranking) == 5) : ?>
-						<li id="rank05" class="rank05_bg">
+						<li class="rank05_bg">
 						<?php endif; ?>
 						<?php
 						if (is_page('225') || is_page('sougou2')) :
@@ -530,7 +535,7 @@
 						</div>
 						<div class="top_area">
 							<!-- permalink, title -->
-							<p class="name"><a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');"><?php the_title(); ?></a></p>
+							<p class="name"><a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"><?php the_title(); ?></a></p>
 							<p class="com pink01">
 								<?php
 								if (is_page('225') || is_page('sougou2')) :
@@ -591,7 +596,7 @@
 						</div>
 						<!-- permalink, image -->
 						<p class="main_img">
-							<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" alt="">
+							<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" alt="">
 								<img src="
                   <?php
 									if (is_page('225') || is_page('sougou2')) :
@@ -1254,10 +1259,10 @@
 										<?php endif; ?>
 									<?php endif; ?>
 								<?php elseif (is_page('ranking_vio')) : ?>
-									<<<<<<< HEAD <!-- // waki -->
-										=======
+									<!-- <<<<<<< HEAD // waki -->
+										<!-- ======= -->
 										<!-- // vio -->
-										>>>>>>> develop
+										<!-- >>>>>>> develop -->
 										<?php if (get_field('vio_voice_subject_1') || get_field('vio_voice_subject_2')) : ?>
 											<?php if (get_field('vio_voice_subject_1')) : ?>
 												<div class="box_in">
@@ -1491,70 +1496,185 @@
 									<?php endif; ?>
 							</div>
 						</div>
+
+						<!-- set localstorage for card image and url -->
+						<script>
+							function info_<?php echo $post->ID;?>() {
+								console.log('set storage');
+
+								var nearby = localStorage.getItem('nearby');
+
+								var isTop = localStorage.getItem('isTop');
+								var isCost = localStorage.getItem('isCost');
+								var isStudent = localStorage.getItem('isStudent');
+								var isWorker = localStorage.getItem('isWorker');
+								var isBody = localStorage.getItem('isBody');
+								var isTwenty = localStorage.getItem('isTwenty');
+								var isVio = localStorage.getItem('isVio');
+								var isFace = localStorage.getItem('isFace');
+
+
+								if (isTop == "yes") {
+									var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isCost == "yes") {
+									<?php if(get_field('url_nearby_cost')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_cost'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_cost')): ?>
+										var publicUrl = "<?php the_field('url_public_cost'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isStudent == "yes") {
+									<?php if(get_field('url_nearby_student')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_student'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_student')): ?>
+										var publicUrl = "<?php the_field('url_public_student'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isWorker == "yes") {
+									<?php if(get_field('url_nearby_worker')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_worker'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_worker')): ?>
+										var publicUrl = "<?php the_field('url_public_worker'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isBody == "yes") {
+									<?php if(get_field('url_nearby_body')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_body'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_body')): ?>
+										var publicUrl = "<?php the_field('url_public_body'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isTwenty == "yes") {
+									<?php if(get_field('url_nearby_twenty')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_twenty'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_twenty')): ?>
+										var publicUrl = "<?php the_field('url_public_twenty'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isVio == "yes") {
+									<?php if(get_field('url_nearby_vio')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_vio'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_vio')): ?>
+										var publicUrl = "<?php the_field('url_public_vio'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else if (isFace == "yes") {
+									<?php if(get_field('url_nearby_face')): ?>
+										var nearbyUrl = "<?php the_field('url_nearby_face'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var nearbyUrl = "<?php the_field('url_nearby'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									<?php if(get_field('url_public_face')): ?>
+										var publicUrl = "<?php the_field('url_public_face'); ?><?php echo $ad_code; ?>";
+									<?php else: ?>
+										var publicUrl = "<?php the_field('url_public'); ?><?php echo $ad_code; ?>";
+									<?php endif; ?>
+									localStorage.setItem('nearbyUrl', nearbyUrl);
+									localStorage.setItem('publicUrl', publicUrl);
+								} else {
+									localStorage.removeItem('nearbyUrl', nearbyUrl);
+									localStorage.removeItem('publicUrl', publicUrl);
+								}
+
+								// CARD IMAGE
+								<?php if(get_field('image_main')):?> 
+									localStorage.setItem('image_main', "<?php the_field('image_main');?>");
+								<?php else: ?>
+									localStorage.removeItem('image_main');
+								<?php endif; ?>
+
+								<?php if(get_field('image_sp')):?> 
+									localStorage.setItem('image_sp', "<?php the_field('image_sp');?>");
+								<?php else: ?>
+									localStorage.removeItem('image_sp');
+								<?php endif; ?>
+
+								// CARD NAME
+								localStorage.setItem('name', "<?php the_title();?>");
+
+								localStorage.setItem('useDefault', "yes");
+
+								window.open(
+									'<?php echo home_url();?>/loading?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>',
+									'_blank' // <- This is what makes it open in a new window.
+								);
+							}
+						</script>
 						<div class="btn_box">
 							<!-- link to external pages -->
-							<?php
-							$current_id = get_the_ID();
-							?>
-							<?php if ($current_id == 318 || $current_id == 325 || $current_id == 379 || $current_id == 375 || $current_id == 394 || $current_id == 314) : ?>
-								<p class="btn_more02 shop btn_animation aco"><span>近くの<br class="sp">店舗を探す</span></p>
-							<?php else : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="btn_more02 shop btn_animation" onClick="localStorage.setItem('nearby', 'yes');"><span>近くの<br class="sp">店舗を調べる</span></a>
-							<?php endif; ?>
-							<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="btn_more02 hp btn_animation" onClick="localStorage.removeItem('nearby');"><span>公式サイトで<br>詳細を見る</span></a>
+							<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="btn_more02 shop btn_animation" onClick="localStorage.removeItem('nearby', 'yes');"><span>口コミや<br class="sp">詳細を<br class="hide">見る</span></a>
+
+							<a class="btn_more02 hp btn_animation" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"><span>公式サイトで<br class="sp">詳細を<br class="hide">みる</span></a>
 						</div>
-						<!-- shop list -->
-						<?php
-						$current_id = get_the_ID();
-						?>
-						<?php if ($current_id == 318) : ?>
-							<!-- shop-list-ginzacolor -->
-							<?php get_template_part('shop-list-ginzacolor'); ?>
-						<?php elseif ($current_id == 325) : ?>
-							<!-- shop-list-kireimo -->
-							<?php get_template_part('shop-list-kireimo'); ?>
-						<?php elseif ($current_id == 379) : ?>
-							<!-- shop-list-koihada -->
-							<?php get_template_part('shop-list-koihada'); ?>
-						<?php elseif ($current_id == 375) : ?>
-							<!-- shop-list-lacoco -->
-							<?php get_template_part('shop-list-lacoco'); ?>
-						<?php elseif ($current_id == 394) : ?>
-							<!-- shop-list-musee -->
-							<?php get_template_part('shop-list-musee'); ?>
-						<?php elseif ($current_id == 314) : ?>
-							<!-- shop-list-stlassh -->
-							<?php get_template_part('shop-list-stlassh'); ?>
-						<?php endif; ?>
+								
 						<p class="campaign_ttl"><img src="<?php echo get_template_directory_uri(); ?>/img/index/ttl_campaign.png" alt="お得なキャンペーン紹介"></p>
 						<!-- campaign -->
 						<div class="campaign_area">
 							<?php if (get_field('campaign_name_1')) : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" class="campaign_block">
+								<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="campaign_block">
 									<span class="ttl bg01"><?php the_field('campaign_name_1'); ?></span>
 									<span class="sttl"><?php the_field('campaign_benefit_1'); ?></span>
 								</a>
 							<?php endif; ?>
 							<?php if (get_field('campaign_name_2')) : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" class="campaign_block">
+								<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="campaign_block">
 									<span class="ttl bg02"><?php the_field('campaign_name_2'); ?></span>
 									<span class="sttl"><?php the_field('campaign_benefit_2'); ?></span>
 								</a>
 							<?php endif; ?>
 							<?php if (get_field('campaign_name_3')) : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" class="campaign_block">
+								<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="campaign_block">
 									<span class="ttl bg03"><?php the_field('campaign_name_3'); ?></span>
 									<span class="sttl"><?php the_field('campaign_benefit_3'); ?></span>
 								</a>
 							<?php endif; ?>
 							<?php if (get_field('campaign_name_4')) : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" class="campaign_block">
+								<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="campaign_block">
 									<span class="ttl bg04"><?php the_field('campaign_name_4'); ?></span>
 									<span class="sttl"><?php the_field('campaign_benefit_4'); ?></span>
 								</a>
 							<?php endif; ?>
 							<?php if (get_field('campaign_name_5')) : ?>
-								<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" onClick="localStorage.removeItem('nearby');" class="campaign_block">
+								<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" class="campaign_block">
 									<span class="ttl bg05"><?php the_field('campaign_name_5'); ?></span>
 									<span class="sttl"><?php the_field('campaign_benefit_5'); ?></span>
 								</a>
@@ -1564,59 +1684,65 @@
 							<?php if ($current_id == 318) : ?>
 								<!-- ginzacolor -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php elseif ($current_id == 325) : ?>
 								<!-- kireimo -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php elseif ($current_id == 379) : ?>
 								<!-- koihada -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php elseif ($current_id == 375) : ?>
 								<!-- lacoco -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php elseif ($current_id == 394) : ?>
 								<!-- musee -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php elseif ($current_id == 314) : ?>
 								<!-- stlassh -->
 								<div class="image">
-									<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>">
+									<a target="_blank" href="javascript:void(0)" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"">
 										<img src="<?php the_field('campaign_image'); ?>" alt="">
 									</a>
 								</div>
 							<?php endif; ?>
 						</div>
 
-						<div class="btn_btm">
-							<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="btn_more02 hp btn_animation ad" onClick="localStorage.removeItem('nearby');"><span>公式ページから詳細を見る</span></a>
+						<!-- <div class="btn_btm">
+							<a href="javascript:void(0)" class="btn_more02 hp btn_animation ad" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')"><span>公式ページから詳細を見る</span></a>
+						</div> -->
+						<div class="btn_box btn_btm">
+							<!-- link to external pages -->
+							<a target="_blank" href="<?php the_permalink() ?>?code=<?php echo $ad_code; ?>" class="btn_more02 shop btn_animation" onClick="localStorage.removeItem('nearby', 'yes');"><span>口コミや<br class="sp">詳細を<br class="hide">見る</span></a>
+
+							<a  href="javascript:void(0)" class="btn_more02 hp btn_animation" onClick="localStorage.removeItem('nearby', 'yes'); info_<?php echo $post->ID;?>(); console.log('to LP')" style="margin: 0;"><span>公式サイトで<br class="sp">詳細を<br class="hide">みる</span></a>
 						</div>
-						</li>
+					</li>
 				<?php
 				endwhile;
 			endif;
 			wp_reset_postdata();
 				?>
 		</ul>
-		<div class="btn open" id="show-rank">
+		<div class="btn" id="show-rank">
 			4位以下を見る&nbsp;<span>&#9660;</span>
 		</div>
 	</div>

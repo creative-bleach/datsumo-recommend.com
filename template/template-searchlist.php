@@ -31,13 +31,13 @@
     <span class="pink01"><?php the_field('star'); ?></span>
   </div> -->
   <div class="top_area">
-    <p class="name"><a href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" target="_blank"><?php the_title(); ?></a></p>
+    <p class="name"><a target="_blank" href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" onclick="localStorage.removeItem('nearby'); localStorage.removeItem('useDefault');"><?php the_title(); ?></a></p>
     <p class="com pink01"><?php the_field('catchcopy'); ?></p>
   </div>
   <!-- if has image -->
   <?php if(get_field('image_main')): ?>
     <p class="main_img">
-      <a href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" target="_blank">
+      <a target="_blank" href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" onclick="localStorage.removeItem('nearby'); localStorage.removeItem('useDefault');">
         <img src="<?php the_field('image_main'); ?>" alt="">
       </a>
     </p>
@@ -146,9 +146,9 @@
     <?php if( $current_id == 318 || $current_id == 325 || $current_id == 379 || $current_id == 375 || $current_id == 394 || $current_id == 314 ): ?>
       <p class="btn_more02 shop btn_animation aco"><span>近くの<br class="sp">店舗を探す</span></p>
     <?php else: ?>
-      <a target="_blank" href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" class="btn_more02 shop btn_animation" onClick="localStorage.setItem('nearby', 'yes');"><span>近くの<br class="sp">店舗を調べる</span></a>
+      <a target="_blank" href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" class="btn_more02 hp btn_animation ad" onclick="localStorage.removeItem('nearby');localStorage.removeItem('useDefault');"><span>近くの<br class="sp">店舗を調べる</span></a>
     <?php endif; ?>
-    <a href="<?php the_permalink()?>?code=<?php echo $ad_code; ?>" class="btn_more02 hp btn_animation" target="_blank"><span>公式サイトで<br class="sp">詳細を見る</span></a>
+    <a target="_blank" href="<?php echo home_url(''); ?>/loading/?<?php echo $post->post_name;?>&code=<?php echo $ad_code; ?>" class="btn_more02 hp btn_animation ad" onclick="localStorage.removeItem('nearby');localStorage.removeItem('useDefault');" class="btn_more02 hp btn_animation"><span>公式サイトで<br class="sp">詳細を<br class="hide">みる</span></a>
   </div>
   <?php 
     $current_id = get_the_ID(); 

@@ -3,8 +3,8 @@
 <!-- ad_code -->
 <?php include locate_template('ad_code.php'); ?>
 
-<?php if (is_single() && 'post' == get_post_type()) : ?>
-	<!-- FOOTER AT SINGLE POST -->
+<?php if (is_page('loading')) : ?>
+<!-- FOOTER AT LOADING PAGE -->
 <?php else : ?>
 	<footer id="footer" class="area">
 		<div class="inner">
